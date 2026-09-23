@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<head>
+    <title>Time table</title>
+    <style>
+        body{
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        .tt {   
+            width: 100%;
+            border-collapse: collapse;
+        }
+        th, td {
+                border: 1px solid black;
+                text-align: center;
+                height: 20px;
+                padding: 5px;
+                vertical-align: middle;
+        }
+
+        .tt tr {
+            height: 20px;
+        }
+
+        h3 {
+            text-align:center;
+        }
+
+        .lab {
+            background-color: rgb(203, 255, 255);
+        }
+
+        .yoga {
+            background-color: rgb(255, 227, 191);
+        }
+
+        .mini-p {
+            background-color: rgb(182, 255, 231);
+        }
+
+        .tbreak {
+            background-color: rgb(235, 235, 255);
+            color:brown;
+            font-weight:bold;
+        }
+
+        footer {
+            text-align:center;
+            font-weight: bold;
+        }
+        
+        .Monday, .Wednesday, .Friday {
+            background-color: rgb(252, 255, 237);
+        }
+
+        .Tuesday, .Thursday, .Saturday {
+            background-color: rgb(255, 237, 249);
+        } 
+
+        .theading {
+            background-color: rgb(233, 233, 233);
+        }
+
+    </style>
+</head>
+
+<body>
+    <header>
+        <h3>Time Table 5th Sem</h3>
+    </header>
+    <table class="tt">
+        <tr class="theading">
+            <th>Day\Time</th>
+            <th>8:00 to 9:00</th>
+            <th>9:00 to 10:00</th>
+            <th>10:00 to 10:30</th>
+            <th>10:30 to 11:30</th>
+            <th>11:30 to 12:30</th>
+            <th>12:30 to 1:30</th>
+            <th>1:30 to 2:30</th>
+            <th>2:30 to 3:30</th>
+            <th>3:30 to 4:30</th>
+            <th>4:30 to 5:30</th>
+        </tr>
+
+        <div>
+            <tr class="Monday">
+                <th rowspan="3">Monday</th>
+                <td></td>
+                <td></td>
+                <td rowspan="15" class="tbreak">TEA BREAK</td>
+                <td>EVS</td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr class="Monday">
+                <td></td>
+                <td></td>
+                <td>CHS</td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr class="Monday">
+                <td></td>
+                <td></td>
+                <td>Online</td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+        </div>
+
+        <div>
+            <tr class="Tuesday">
+                <th rowspan="3">Tuesday</th>
+                <td colspan="2" class="lab">WT lab / CNS lab</td>
+                <td>RM</td>
+                <td>AI</td>
+                <td></td>
+                <td>SE</td>
+                <td>TOC</td>
+                <td>CNS</td>
+                <td></td>
+            </tr>
+            <tr class="Tuesday">
+                <td class="lab">D3+D4</td>
+                <td class="lab">D1+D2</td>
+                <td>MNS</td>
+                <td>SL</td>
+                <td></td>
+                <td>GR</td>
+                <td>NT</td>
+                <td>GHS</td>
+                <td></td>
+            </tr>
+            <tr class="Tuesday">
+                <td class="lab">503</td>
+                <td class="lab">502/518</td>
+                <td>519</td>
+                <td>519</td>
+                <td></td>
+                <td>511</td>
+                <td>511</td>
+                <td>511</td>
+                <td></td>
+            </tr>
+        </div>
+
+        <div>
+            <tr class="Wednesday">
+                <th rowspan="3">Wednesday</th>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td>TOC</td>
+                <td>AI</td>
+                <td>SE</td>
+                <td>RM</td>
+                <td></td>
+            </tr>
+            <tr class="Wednesday">
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td>NT</td>
+                <td>SL</td>
+                <td>GR</td>
+                <td>MNS</td>
+                <td></td>
+            </tr>
+            <tr class="Wednesday">
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td>521</td>
+                <td>521</td>
+                <td>521</td>
+                <td>521</td>
+                <td></td>
+            </tr>
+        </div>
+
+        <div>
+            <tr class="Thursday">
+                <th rowspan="3">Thursday</th>
+                <td colspan="2" class="lab">WT lab / CNS lab</td>
+                <td>TOC</td>
+                <td>SE</td>
+                <td>CNS</td>
+                <td></td>
+                <td colspan="2" rowspan="3" class="mini-p">Mini Project</td>
+                <td></td>
+            </tr>
+            <tr class="Thursday">
+                <td class="lab">D1+D2</td>
+                <td class="lab">D3+D4</td>
+                <td>NT</td>
+                <td>GR</td>
+                <td>GHS</td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr class="Thursday">
+                <td class="lab">503</td>
+                <td class="lab">502/518</td>
+                <td>525</td>
+                <td>525</td>
+                <td>525</td>
+                <td></td>
+                <td></td>
+            </tr>
+        </div>
+
+        <div>
+            <tr class="Friday">
+                <th rowspan="3">Friday</th>
+                <td rowspan="3" class="yoga">YOGA</td>
+                <td>TOC</td>
+                <td>SE</td>
+                <td>CNS</td>
+                <td></td>
+                <td>RM</td>
+                <td>AI</td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr class="Friday">
+                <td>NT</td>
+                <td>GR</td>
+                <td>GHS</td>
+                <td></td>
+                <td>MNS</td>
+                <td>SL</td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr class="Friday">
+                <td>517</td>
+                <td>517</td>
+                <td>517</td>
+                <td></td>
+                <td>521</td>
+                <td>521</td>
+                <td></td>
+                <td></td>
+            </tr>
+        </div>
+
+        <div>
+            <tr class="Saturday">
+                <th rowspan="3">Saturday</th>
+                <td></td>
+                <td></td>
+                <td colspan="3" rowspan="3" class="mini-p">Mini Project</td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr class="Saturday">
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr class="Saturday">
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+        </div>
+    </table>
+
+    <footer>
+        <p>End of Time Table</p>
+    </footer>
+</body>
