@@ -1,86 +1,229 @@
 <!DOCTYPE html>
-<html>
-    <head>
-        <title>Resume</title>
-        <style>
-            .name {
-                text-align: center;
-                padding-top: 5px;
-                padding-bottom: 5px;
-            }
-            .links {
-                display: flex;
-                text-align: justify;
-                justify-content: space-around;
-                padding-left: 10%;
-                padding-right: 40%;
-            }
-            .vertical-line {
-                border-left: 0.5px solid black;
-            }
+<head>
+    <title>My Resume</title>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
 
-            .hr-line{
-                margin-left: 10%;
-                margin-right: 10%;
-            }
+        body {
+            margin: 0;
+            background: #f5f5f5;
+            font-family: Arial, sans-serif;
+        }
+
+        .resume {
+            width: 800px;
+            margin: 30px auto;
+            padding: 40px 50px;
+            background: white;
+        }
+
+        header {
+            display: flex;
+            justify-content: space-between;
+            padding-bottom: 1px;
+            border-bottom: 1px solid #d5d5d5;
+        }
+
+        h1 {
+            margin: 0;
+            font-family: Georgia, serif;
+            font-size: 44px;
+            font-weight: normal;
+            letter-spacing: 2px;
+        }
+
+        .photo {
+            width: 75px;
+            height: 100px;
+            object-fit: cover;
+        }
+
+        main {
+            display: flex;
+        }
+
+        aside {
+            padding-right: 35px;
+            border-right: 1px solid #d5d5d5;
+        }
+
+        article {
+            padding-left: 35px;
+        }
+
+        section {
+            padding: 20px 0;
+            border-bottom: 1px solid #d5d5d5;
+        }
 
 
-        </style>
-    </head>
-    <body>
-        <header class = "name">
-            <div>
-                <h1>TEJASHWINI T R</h1>
-                <img src="" alt="my photo">
-            </div>
-            <hr class="hr-line">
-        </header>
-        <section class = "links">
-            <div class="left-section">
-                <p>CONTACT</p>
-                <div class = "a-ref">
-                    <blockquote><a href="">Gmail</a><br></blockquote>
-                    <blockquote><a href="">LinkedIn</a><br></blockquote>
-                    <blockquote><a href="">GitHub</a><br></blockquote>
+        h2 {
+            margin: 0 0 10px;
+            font-size: 12px;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+        }
+
+        p, li, address {
+            color: #666;
+            font-size: 10px;
+            line-height: 1.5;
+        }
+
+        a {
+            color: #555;
+            text-decoration: none;
+        }
+
+        ul {
+            margin: 0;
+            padding-left: 18px;
+        }
+
+        .summary {
+            margin: 0;
+            font-size: 10px;
+        }
+
+        .education {
+            width: 100%;
+            border-collapse: collapse;
+            font-size: 10px;
+        }
+
+        .education th, .education td {
+            padding: 3px 6px;
+            border: 1px solid #d5d5d5;
+            text-align: left;
+        }
+
+        .project, .certification {
+            margin-bottom: 20px;
+        }
+
+        .project strong, .certification strong {
+            font-size: 10px;
+        }
+    </style>
+</head>
+
+<body>
+<div class="resume">
+    <header>
+        <h1>Tejashwini T R</h1>
+        <img src="photo.jpg" alt="My Photo" class="photo">
+    </header>
+
+    <main>
+        <aside>
+            <section>
+                <h2>Contact</h2>
+                <address>
+                    +91 9008731764<br>
+                    <a href="mailto:tejashwinitr2021@gmail.com">tejashwinitr2021@gmail.com</a>
+                    <a href="https://linkedin.com">linkedin.com/in/tejashwini-t-r</a>
+                    <a href="https://github.com">github.com/Teju-24</a>
+                </address>
+            </section>
+
+            <section>
+                <h2>Skills</h2>
+                <ul>
+                    <li>C</li>
+                    <li>Data Structures & Algorithms</li>
+                    <li>Database Systems</li>
+                    <li>Operating Systems</li>
+                </ul>
+            </section>
+
+            <section>
+                <h2>Languages</h2>
+                <ul>
+                    <li>English</li>
+                    <li>Kannada</li>
+                    <li>Hindi</li>
+                </ul>
+            </section>
+
+            <section>
+                <h2>Interests</h2>
+                <ul>
+                    <li>Problem Solving</li>
+                    <li>Technology</li>
+                </ul>
+            </section>
+        </aside>
+
+        <article>
+            <section>
+                <h2>Summary</h2>
+                <p class="summary">
+                    Third-year B.E. Computer Science and Engineering student with a foundational understanding of data structures, 
+databases, and programming, seeking a opportunity to apply and grow my technical skills in a professional software development environment.
+                </p>
+            </section>
+
+            <section>
+                <h2>Education</h2>
+                <table class="education">
+                    <tr>
+                        <th>Qualification</th>
+                        <th>Institution</th>
+                        <th>Year</th>
+                        <th>Result</th>
+                    </tr>
+
+                    <tr>
+                        <td>B.E. Computer Science & Engineering</td>
+                        <td>Bangalore Institute of Technology</td>
+                        <td>2024 - 2028</td>
+                        <td>9.95 CGPA</td>
+                    </tr>
+
+                    <tr>
+                        <td>12th / PUC</td>
+                        <td>Vidya Mandir Ind. PU College</td>
+                        <td>2022 - 2024</td>
+                        <td>96.7%</td>
+                    </tr>
+
+                    <tr>
+                        <td>10th</td>
+                        <td>Nirmala Rani High School</td>
+                        <td>2019-2022</td>
+                        <td>97.7%</td>
+                    </tr>
+                </table>
+            </section>
+
+            <section>
+                <h2>Projects</h2>
+                <div class="project">
+                    <strong>IoT-Based Smart Manhole Monitoring System</strong>
+                    <p>Built a sensor-based system to monitor manholes and alert municipal authorities in advance when the water level 
+approaches a clogged/filled state, enabling timely cleaning. Integrated ultrasonic sensor for water level detection, gas sensors to detect hazardous gases, and a tilt sensor to 
+identify unauthorized lifting of the manhole lid to prevent theft. Developed using Embedded C with sensor interfacing for real-time monitoring and alerting.</p>
                 </div>
-                <hr>
-                <div>
-                    <p>SKILLS</p>
-                    <ul>
-                        <li>Data Structures & Algorithms</li>
-                        <li>Database Systems</li>
-                        <li>Operating Systems</li>
-                    </ul>
+
+                <div class="project">
+                    <strong>Ambulance Traffic Management System</strong>
+                    <p>Designed a web portal allowing patients to request an ambulance, with the nearest available ambulance notified 
+automatically for faster response. Planned prior notification of traffic signals along the ambulance's route to help keep the path clear and reduce delays caused 
+by signal waiting. Tools/Technologies: Oracle SQL, NetBeans, Java (primary focus on database design and querying)</p>
                 </div>
-                <hr>
-                <div>
-                    <p>LANGUAGES KNOWN</p>
-                    <blockquote>Kannada</blockquote>
-                    <blockquote>English</blockquote>
-                    <blockquote>Hindi</blockquote>
+            </section>
+
+            <section>
+                <h2>Certifications</h2>
+                <div class="certification">
+                    <p>• Artificial Intelligence (Basics) – IBM, Computer Fundamentals</p>
+                    <p>• Low-Level Computing for Computer Science & Engineering 2025+ – Udemy </p>
                 </div>
-                
-            </div>
-
-            <div class="vertical-line"></div>
-
-            <div class="right-section">
-                <div class="edu-quals">
-                    <p>Educational Qualifications</p>
-                    <p>10<sup>th</sup></p>
-                    <p>12<sup>th</sup></p>
-                    <p>B.E</p>
-                </div>
-                <hr>
-                <div class="">
-
-                </div>
-            </div>
-            
-        </section>
-
-        <section>
-
-        </section>
-    </body>
+            </section>
+        </article>
+    </main>
+</div>
+</body>
 </html>
