@@ -1,0 +1,58 @@
+<html>
+    <head>
+        <style>
+            body {
+                text-align: center;
+                font-family: Arial;
+                background: lightgray;
+            }
+
+            input, button {
+                padding: 8px;
+                margin: 5px;
+            }
+
+            button { 
+                background: blue;
+                color: white;
+                border: none;
+            }
+        </style>
+    </head>
+    <body>
+        <h2>Simple Calculator</h2>
+        <input id="a" type="number" placeholder="First number">
+        <input id="b" type="number" placeholder="Second number">
+        <br>
+        <button onclick="cal('+')">Sum</button>
+        <button onclick="cal('-')">Difference</button>
+        <button onclick="cal('*')">Product</button>
+        <button onclick="cal('/')">Quotient</button>
+        <button onclick="cal('%')">Remainder</button>
+        <button onclick="cal('**')">Power</button>
+        <button onclick="cal('sqrt')">Square Root</button>
+        <button onclick="cal('square')">Square</button>
+        <p id="result">Result: </p>
+
+        <script>
+            function cal(op) {
+                var a = +document.getElementById("a").value;
+                var b = +document.getElementById("b").value;
+                var r;
+            
+
+            switch(op) {
+                case '+': r=a+b; break;
+                case '-': r=a-b; break;
+                case '*': r=a*b; break;
+                case '/': r=b==0 ? "Cannot divide by zero": a/b; break;
+                case '%': r=b==0 ? "Cannot divide by zero": a%b; break;
+                case '**': r=a**b; break;
+                case 'sqrt': r=a<0 ? "Invalid input": Math.sqrt(a); break;
+                case 'square': r=a*a; break;
+            }
+            document.getElementById("result").innerHTML = "Result: " +r;
+        }
+        </script>
+    </body>
+</html>
