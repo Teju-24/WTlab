@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>JSON</title>
+        <style>
+            body {
+                text-align: center;
+                font-family: Arial;
+                background: lightgray;
+            }
+
+            textarea, button {
+                margin: 8px; 
+                padding: 8px;
+            }
+
+            textarea {
+                width: 80%;
+                height: 120px;
+            }
+
+            button {
+                background: blue;
+                color: white;
+                border: 0;
+            }
+        </style>
+    </head>
+    <body>
+        <h2>JSON convertor</h2>
+        <textarea id="data" placeholder="Enter JSON or CSV or String"></textarea>
+        <br>
+        <button onclick="obj()">JSON to Object</button>
+        <button onclick="date()">JSON to Date</button>
+        <button onclick="csv()">JSON to CSV</button>
+        <button onclick="json()">CSV to JSON</button>
+        <button onclick="hash()">SHA-256 Hash</button>
+        <br>
+        <textarea id="output" placeholder="Output will appear here"></textarea>
+
+        <script>
+            function obj() {
+                var result = JSON.parse(data.value);
+                output.value = Object.entries(result)
+                .map(([key, value])=>key+"."+value)
+                .join("\n");
+            }
+            
+            function date() {
+                result = new Date(JSON.parse(data.value).date);
+                output.value=result;
+            }
+
+            function csv() {
+                var x = JSON.parse(data.value);
+                var s = Object.keys(x[0]).join(",") + "\n";
+                x.forEach(function(a) {
+                    s += Object.values(a).join(",") + "\n";
+                });
+                output.value = s;
+            }
+
+            function json() {
+                var l = data.value.trim().split("\n");
+                var k = l[0].split(",");
+                var x = [];
+
+                for(var i=1; i<l.length; i++) {
+                    var v = l[i].split(","), o={};
+                    for(var j=0; j<k.length; j++) 
+                        o[k[j]] = v[j];
+                    x[i-1] = o;
+                }
+                output.value=JSON.stringify(x);
+            }
+            
+            async function hash() {
+                var str = data.value;
+                var bytes = new TextEncoder().encode(str);
+                var result = await crypto.subtle.digest('SHA-256', bytes);
+                var hash = Array.from(new Uint8Array(result))
+                .map(b=> b.toString(16).padStart(2, '0'))
+                .join('');
+                output.value = "Hash: " +hash;
+            }
+        </script>
+    </body>
+</html>
